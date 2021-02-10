@@ -20,6 +20,7 @@ public class Folder {
 
 
     @OneToMany(mappedBy = "folder")
+    @JsonIgnoreProperties({"folder"})
     private List<File> files;
 
     @ManyToOne

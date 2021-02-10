@@ -18,7 +18,7 @@ public class User {
     private String name;
 
     @OneToMany(mappedBy = "user")
-    @JsonIgnoreProperties({"user"})
+    @JsonIgnoreProperties({"folder", "user"})
     private List<Folder> folders;
 
     public User(String name) {
